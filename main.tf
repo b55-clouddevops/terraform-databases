@@ -23,12 +23,14 @@ module "mysql" {
   MYSQL_INSTANCE_TYPE  = var.MYSQL_INSTANCE_TYPE
 }
 
-output "redis" {
-    value   = module.redis.redis
-}
 # module "rabbitmq" {
 #   source              = "./vendor/modules/rabbitmq"
 #   ENV                 = var.ENV
+# }
+
+
+# output "redis" {
+#     value   = module.redis.redis
 # }
 
 # We cannot parametrize anything that's added n the source.
