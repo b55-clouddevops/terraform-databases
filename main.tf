@@ -13,7 +13,6 @@ module "redis" {
   REDIS_INSTANCE_TYPE  = var.REDIS_INSTANCE_TYPE
   REDIS_PORT           = var.REDIS_PORT
   REDIS_INSTANCE_COUNT = var.REDIS_INSTANCE_COUNT
-
 }
 
 module "mysql" {
@@ -24,6 +23,9 @@ module "mysql" {
   MYSQL_INSTANCE_TYPE  = var.MYSQL_INSTANCE_TYPE
 }
 
+output "redis" {
+    value   = module.redis.redis
+}
 # module "rabbitmq" {
 #   source              = "./vendor/modules/rabbitmq"
 #   ENV                 = var.ENV
