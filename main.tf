@@ -23,10 +23,12 @@ module "mysql" {
   MYSQL_INSTANCE_TYPE  = var.MYSQL_INSTANCE_TYPE
 }
 
-# module "rabbitmq" {
-#   source              = "./vendor/modules/rabbitmq"
-#   ENV                 = var.ENV
-# }
+module "rabbitmq" {
+  source                 = "./vendor/modules/rabbitmq"
+  ENV                    = var.ENV
+  RABBITMQ_PORT_NUMBER   = var. RABBITMQ_PORT_NUMBER
+  RABBITMQ_INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+}
 
 
 # output "redis" {
